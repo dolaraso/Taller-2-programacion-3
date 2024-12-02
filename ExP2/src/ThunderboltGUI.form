@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ThunderboltGUI">
+  <grid id="27dc6" row-count="9" column-count="2" layout-manager="GridLayoutManager">
+    <!-- Márgenes -->
+    <margin top="5" left="5" bottom="5" right="5"/>
+    
+    <!-- Restricciones de la grilla -->
+    <constraints>
+      <xy x="20" y="20" width="500" height="500"/>
+      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+    </constraints>
+    
+    <!-- Bordes del formulario (Obligatorio en IntelliJ IDEA) -->
+    <border type="line"/>
+    
+    <!-- Elementos dentro del formulario -->
+    <children>
+      <!-- Campos de Registro de Thunderbolt -->
+      <label text="Código:"/>
+      <text-field id="txtCodigo" width="150" height="25"/>
+
+      <label text="Nombre:"/>
+      <text-field id="txtNombre" width="150" height="25"/>
+
+      <label text="Habilidad Principal:"/>
+      <combo-box id="comboHabilidad" width="150" height="25">
+        <item value="Combate Cuerpo a Cuerpo"/>
+        <item value="Tiro Preciso"/>
+        <item value="Tecnología Avanzada"/>
+        <item value="Sigilo"/>
+        <item value="Supervelocidad"/>
+      </combo-box>
+
+      <label text="Nivel de Redención:"/>
+      <combo-box id="comboNivel" width="150" height="25">
+        <item value="1"/>
+        <item value="2"/>
+        <item value="3"/>
+        <item value="4"/>
+        <item value="5"/>
+      </combo-box>
+
+      <label text="Misión Asignada:"/>
+      <combo-box id="comboMision" width="150" height="25">
+        <item value="Misión A"/>
+        <item value="Misión B"/>
+        <item value="Misión C"/>
+      </combo-box>
+
+      <button id="btnAgregar" text="Agregar Thunderbolt" width="150" height="30"/>
+
+      <!-- Espacio vacío para separación -->
+      <label text=""/>
+      <label text=""/>
+
+      <!-- Tabla de Thunderbolts -->
+      <table id="tableThunderbolts" row-count="0" column-count="5" width="600" height="200">
+        <column width="120"/>
+        <column width="120"/>
+        <column width="120"/>
+        <column width="120"/>
+        <column width="120"/>
+        <row>
+          <cell>Codigo</cell>
+          <cell>Nombre</cell>
+          <cell>Habilidad</cell>
+          <cell>Nivel Redención</cell>
+          <cell>Misión Asignada</cell>
+        </row>
+      </table>
+    </children>
+  </grid>
+
+  <!-- Contenedor de las Pestañas (Tabs) -->
+  <tabbed-pane id="tabbedPane">
+    <tab text="Buscar Thunderbolt">
+      <grid id="searchGrid" row-count="2" column-count="2" layout-manager="GridLayoutManager">
+        <margin top="5" left="5" bottom="5" right="5"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <label text="Código a buscar:"/>
+        <text-field id="txtCodigoBuscar" width="150" height="25"/>
+        <button id="btnBuscar" text="Buscar Thunderbolt" width="150" height="30"/>
+      </grid>
+    </tab>
+
+    <tab text="Filtrar Thunderbolts">
+      <grid id="filterGrid" row-count="2" column-count="2" layout-manager="GridLayoutManager">
+        <margin top="5" left="5" bottom="5" right="5"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <label text="Filtrar por Habilidad:"/>
+        <combo-box id="comboHabilidadFiltrado" width="150" height="25">
+          <item value="Combate Cuerpo a Cuerpo"/>
+          <item value="Tiro Preciso"/>
+          <item value="Tecnología Avanzada"/>
+          <item value="Sigilo"/>
+          <item value="Supervelocidad"/>
+        </combo-box>
+        <button id="btnFiltrar" text="Filtrar Thunderbolts" width="150" height="30"/>
+      </grid>
+    </tab>
+
+    <tab text="Conteo de Misiones">
+      <grid id="countGrid" row-count="2" column-count="2" layout-manager="GridLayoutManager">
+        <margin top="5" left="5" bottom="5" right="5"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <label text="Contar por Habilidad:"/>
+        <combo-box id="comboHabilidadConteo" width="150" height="25">
+          <item value="Combate Cuerpo a Cuerpo"/>
+          <item value="Tiro Preciso"/>
+          <item value="Tecnología Avanzada"/>
+          <item value="Sigilo"/>
+          <item value="Supervelocidad"/>
+        </combo-box>
+        <button id="btnContar" text="Contar Misiones" width="150" height="30"/>
+      </grid>
+    </tab>
+  </tabbed-pane>
+</form>
